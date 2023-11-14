@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Realistic Solar System</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #000;
+      perspective: 1000px;
+    }
+
+    .sun {
+      width: 150px;
+      height: 150px;
+      background-color: #ffcc00;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 0 50px #ffcc00;
+    }
+
+    .planet {
+      position: absolute;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #aaa;
+    }
+
+    /* Planet colors and sizes */
+    .mercury { background-color: #a9a9a9; width: 5px; height: 5px; }
+    .venus { background-color: #ffd700; width: 12px; height: 12px; }
+    .earth { background-color: #70a1ff; width: 12px; height: 12px; }
+    .mars { background-color: #ff6347; width: 8px; height: 8px; }
+    .jupiter { background-color: #d98e5a; width: 40px; height: 40px; }
+    .saturn { background-color: #ffd27f; width: 35px; height: 35px; }
+    .uranus { background-color: #afeeee; width: 18px; height: 18px; }
+    .neptune { background-color: #36648b; width: 17px; height: 17px; }
+
+    /* Planet positions */
+    .mercury { transform-origin: 50% 120px; animation: rotateMercury 4s linear infinite; }
+    .venus { transform-origin: 50% 160px; animation: rotateVenus 8s linear infinite; }
+    .earth { transform-origin: 50% 200px; animation: rotateEarth 12s linear infinite; }
+    .mars { transform-origin: 50% 240px; animation: rotateMars 16s linear infinite; }
+    .jupiter { transform-origin: 50% 320px; animation: rotateJupiter 20s linear infinite; }
+    .saturn { transform-origin: 50% 380px; animation: rotateSaturn 24s linear infinite; }
+    .uranus { transform-origin: 50% 440px; animation: rotateUranus 28s linear infinite; }
+    .neptune { transform-origin: 50% 490px; animation: rotateNeptune 32s linear infinite; }
+
+    /* Planet rotation animations */
+    @keyframes rotateMercury { 100% { transform: rotate(360deg); } }
+    @keyframes rotateVenus { 100% { transform: rotate(360deg); } }
+    @keyframes rotateEarth { 100% { transform: rotate(360deg); } }
+    @keyframes rotateMars { 100% { transform: rotate(360deg); } }
+    @keyframes rotateJupiter { 100% { transform: rotate(360deg); } }
+    @keyframes rotateSaturn { 100% { transform: rotate(360deg); } }
+    @keyframes rotateUranus { 100% { transform: rotate(360deg); } }
+    @keyframes rotateNeptune { 100% { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+  <div class="sun"></div>
+  <div class="planet mercury"></div>
+  <div class="planet venus"></div>
+  <div class="planet earth"></div>
+  <div class="planet mars"></div>
+  <div class="planet jupiter"></div>
+  <div class="planet saturn"></div>
+  <div class="planet uranus"></div>
+  <div class="planet neptune"></div>
+</body>
+</html>
